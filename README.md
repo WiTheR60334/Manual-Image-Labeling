@@ -1,5 +1,21 @@
 # Gigazit Take-Home Challenge: Raw Image to Labeled Image Conversion
 
+
+
+- I've developed two scripts for image labeling: a manual labeling tool, inspired by YOLO that allows users to define and assign classes to images manually. Additionally, I've created an automation labeling script , which utilizes TensorFlow's object detection capabilities to automatically label images based on detected objects.
+
+## Project Overview
+
+- My project integrates advanced object detection and tracking capabilities using deep learning models and the `DaSiamRPN algorithm`. The main components are divided across several files: `main.py` manages the core functionality, coordinating image input and output through the input/ and output/ directories. Configuration settings in config.ini define object detection parameters, including score thresholds and specific object IDs. The `dasiamrpn.py` file encapsulates the DaSiamRPN tracker, enabling real-time object tracking across frames.
+
+## Manual Labeling Process
+
+- The project features a robust manual labeling system inspired by `YOLO`(You Only Look Once) methodology. Users annotate images by placing bounding boxes around objects of interest, enhancing the dataset for training models.
+
+## Addtional Features
+
+- An additional automation labeling script leverages TensorFlow's object detection capabilities, providing automated annotation to streamline data preparation. This dual approach ensures comprehensive labeling, crucial for training accurate object detection models in applications such as surveillance, robotics, and automated systems.
+
 Image labeling in multiple annotation formats:
 - PASCAL VOC (= [darkflow](https://github.com/thtrieu/darkflow))
 - [YOLO darknet](https://github.com/pjreddie/darknet)
@@ -103,6 +119,28 @@ Mouse:
   - **Right-click** -> **quick delete**!
   - Use the middle mouse to zoom in and out
   - Use double click to select a bounding box
+
+## Working
+
+If you paste your own image in input dir for labeling , then you need to define the classes in each new line like this : 
+![image](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/83b1840b-ae49-4fe0-a5cc-3ffcf20aa084)
+
+I would be using these 3 classes as example.
+
+![Screenshot 2024-07-11 164616](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/90fcf18b-4ee4-4461-8f37-a7209267967e)
+From above image we can clearly see that we can manually rectangle the person and label it.
+
+![Screenshot 2024-07-11 164705](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/54db8074-e4cc-4b73-b726-5e006f762e2f)
+To change the class, press `w` and manually rectangle the object.
+
+![Screenshot 2024-07-11 164830](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/6f51fd2a-290a-4167-a366-fae923c2b3af)
+We need to manually label each and every object related to that class for better performace of model.
+
+![Screenshot 2024-07-11 164930](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/e520cd4a-0411-43a2-a69b-d8c16ee81677)
+You can clealry see that in img_1 of person, we had rectangled 5 people and those 5 peoples markings are saved in a txt file of output dir.
+Similarly goes for img 2 and 3 also.
+
+Labeled images are also saved in .xml format in output dir.
 
 ## Authors
 
