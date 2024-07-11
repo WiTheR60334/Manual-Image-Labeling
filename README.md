@@ -27,6 +27,7 @@ Image labeling in multiple annotation formats:
 - [Prerequisites](#prerequisites)
 - [Run project](#run-project)
 - [GUI usage](#gui-usage)
+- [Working](#working)
 - [Authors](#authors)
 
 ## Quick start
@@ -122,25 +123,31 @@ Mouse:
 
 ## Working
 
-If you paste your own image in input dir for labeling , then you need to define the classes in each new line like this : 
+- If you paste your own image in input dir for labeling , then you need to define the classes in each new line like this : 
+
 ![image](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/83b1840b-ae49-4fe0-a5cc-3ffcf20aa084)
 
-I would be using these 3 classes as example.
+- I would be using these 3 classes as example.
 
+- From below image we can clearly see that we can manually rectangle the person and label it.
+  
 ![Screenshot 2024-07-11 164616](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/90fcf18b-4ee4-4461-8f37-a7209267967e)
-From above image we can clearly see that we can manually rectangle the person and label it.
 
+
+- To change the class, press `w` and manually rectangle the object.
+  
 ![Screenshot 2024-07-11 164705](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/54db8074-e4cc-4b73-b726-5e006f762e2f)
-To change the class, press `w` and manually rectangle the object.
 
+- We need to manually label each and every object related to that class for better performace of model.
+  
 ![Screenshot 2024-07-11 164830](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/6f51fd2a-290a-4167-a366-fae923c2b3af)
-We need to manually label each and every object related to that class for better performace of model.
 
+- You can clealry see that in img_1 of person, we had rectangled 5 people and those 5 peoples markings are saved in a txt file of output dir. Similarly goes for img 2 and 3 also.
+  
 ![Screenshot 2024-07-11 164930](https://github.com/WiTheR60334/Manual-Image-Labeling/assets/115364885/e520cd4a-0411-43a2-a69b-d8c16ee81677)
-You can clealry see that in img_1 of person, we had rectangled 5 people and those 5 peoples markings are saved in a txt file of output dir.
-Similarly goes for img 2 and 3 also.
 
-Labeled images are also saved in .xml format in output dir.
+
+- Labeled images are also saved in .xml format in output dir.
 
 ## Authors
 
